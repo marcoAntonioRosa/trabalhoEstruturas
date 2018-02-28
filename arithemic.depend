@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1519797934 source:c:\users\light\documents\arithemic\main.cpp
+	<iostream>
+	<Aritmetica.h>
+
+1519754320 c:\users\light\documents\arithemic\typeof.h
+
+1519797732 source:c:\users\light\documents\arithemic\src\progressao.cpp
+	"Progressao.h"
+
+1519830417 c:\users\light\documents\arithemic\include\progressao.h
+	<sstream>
+	<vector>
+
+1519798088 source:c:\users\light\documents\arithemic\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1519830538 c:\users\light\documents\arithemic\include\aritmetica.h
+	<Progressao.h>
+
+1519843577 source:c:\users\administrador\desktop\arithemic\main.cpp
+	<iostream>
+	<Progressao.h>
+	<Aritmetica.h>
+
+1519838564 source:c:\users\administrador\desktop\arithemic\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1519835715 source:c:\users\administrador\desktop\arithemic\src\progressao.cpp
+	"Progressao.h"
+
