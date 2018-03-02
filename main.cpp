@@ -1,15 +1,21 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 #include <Progressao.h>
 #include <Aritmetica.h>
 
+#include <mingw.thread.h>
+#include <conio.h>
+#include <windows.h>
+
 using namespace std;
+
 
 int main()
 {
-    Progressao* progressao = new Aritmetica();
+    Aritmetica ar;
+    ar.setSequence("1,4,7");
 
-    progressao->userInput("2k,3,4,7,8,9");
-    progressao->getValues();
-
+    cout << ar.getSpecificTerm(40);
 }

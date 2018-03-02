@@ -29,3 +29,32 @@
 1519835715 source:c:\users\administrador\desktop\arithemic\src\progressao.cpp
 	"Progressao.h"
 
+1519987861 source:c:\users\light\desktop\trabalhopapg-master\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<Progressao.h>
+	<Aritmetica.h>
+	<mingw.thread.h>
+	<conio.h>
+	<windows.h>
+
+1519987911 source:c:\users\light\desktop\trabalhopapg-master\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1519960839 source:c:\users\light\desktop\trabalhopapg-master\src\progressao.cpp
+	"Progressao.h"
+
+1519950312 source:c:\users\alunos\downloads\trabalhopapg-master\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1519919518 source:c:\users\alunos\downloads\trabalhopapg-master\src\progressao.cpp
+	"Progressao.h"
+
+1519949644 source:c:\users\alunos\downloads\trabalhopapg-master\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<Progressao.h>
+	<Aritmetica.h>
+
