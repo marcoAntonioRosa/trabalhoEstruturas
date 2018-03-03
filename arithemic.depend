@@ -58,3 +58,18 @@
 	<Progressao.h>
 	<Aritmetica.h>
 
+1520055637 source:c:\users\light\desktop\trabalhopapg\src\progressao.cpp
+	"Progressao.h"
+
+1520062437 source:c:\users\light\desktop\trabalhopapg\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<Progressao.h>
+	<Aritmetica.h>
+	<conio.h>
+	<windows.h>
+
+1520062486 source:c:\users\light\desktop\trabalhopapg\src\aritmetica.cpp
+	"Aritmetica.h"
+
