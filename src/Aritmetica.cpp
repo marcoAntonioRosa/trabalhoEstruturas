@@ -24,7 +24,10 @@ bool Aritmetica::setSequence(string userinput)
 
     if (passed && isArithmetic(input))
     {
-        //privateGetCommonDiference();
+        if (input.size() == 1)
+            setCommonDiference(input.at(0));
+        else
+            setCommonDiference(privateGetCommonDiference());
         return true;
     }
     this->isinput = false;

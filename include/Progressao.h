@@ -16,20 +16,25 @@ protected:
     vector <float> input;
     string userinput;
     bool isinput;
-
     float firstterm;
     float tempt;
     float term;
     float commondifference;
 public:
-//    virtual bool userInput(string) = 0;
+//    bool setSequence(string);
 //
-//    virtual void setTerm(float term) = 0;
-//    virtual void setCommonDiference(float commondifference) = 0;
+//    void setTerm(float term);
+//    void setCommonDiference(float commondifference);
+//    void setFirstTerm(float firstterm);
 //
-//    virtual void print() = 0;
-//    virtual bool isArithmetic() = 0;
-//    virtual float getCommonDiference() = 0;
+//    float getCommonDiference();
+//    float getFirstTerm();
+//    float getTerm();
+//
+//    float getSpecificTerm(float specterm);
+//    float getNthTerm(float commondifference, float term, float index);
+//
+//    void print();
 };
 
 #endif // PROGRESSAO_H

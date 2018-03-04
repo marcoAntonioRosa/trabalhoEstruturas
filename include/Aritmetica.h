@@ -17,7 +17,6 @@ public:
     void setCommonDiference(float commondifference);
     void setFirstTerm(float firstterm);
 
-
     float getCommonDiference();
     float getFirstTerm();
     float getTerm();
@@ -25,9 +24,8 @@ public:
     float getSpecificTerm(float specterm);
     float getNthTerm(float commondifference, float term, float index);
 
-
     void print();
-};
 
+};
 
 #endif // ARITMETICA_H
