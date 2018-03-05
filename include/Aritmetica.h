@@ -7,6 +7,7 @@
 class Aritmetica : public Progressao
 {
 private:
+    float privateGetCommonDiference();
     bool isInput(bool isinput);
     bool isArithmetic(vector <float> userinput);
 public:
@@ -21,10 +22,10 @@ public:
     float getTerm();
 
     float getSpecificTerm(float specterm);
-
+    float getNthTerm(float commondifference, float term, float index);
 
     void print();
-};
 
+};
 
 #endif // ARITMETICA_H

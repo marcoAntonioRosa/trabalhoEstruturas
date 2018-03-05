@@ -24,6 +24,10 @@ bool Aritmetica::setSequence(string userinput)
 
     if (passed && isArithmetic(input))
     {
+        if (input.size() == 1)
+            setCommonDiference(input.at(0));
+        else
+            setCommonDiference(privateGetCommonDiference());
         return true;
     }
     this->isinput = false;
@@ -65,9 +69,9 @@ bool Aritmetica::isArithmetic(vector <float> input)
     return false;
 }
 
-float Aritmetica::getCommonDiference()
+float Aritmetica::privateGetCommonDiference()
 {
-    if(isArithmetic(input) && input.size() > 0)
+    if(isArithmetic(input) && input.size() > 1)
     {
         setCommonDiference((input.at(1) - input.at(0)));
         return (input.at(1) - input.at(0));
@@ -86,7 +90,7 @@ float Aritmetica::getFirstTerm()
 
 float Aritmetica::getSpecificTerm(float specterm)
 {
-    float specificterm = getFirstTerm() + ((specterm - 1) * getCommonDiference());
+    float specificterm = getFirstTerm() + ((specterm - 1) * privateGetCommonDiference());
     return specificterm;
 }
 
@@ -99,4 +103,18 @@ void Aritmetica::print()
             cout << input.at(x) << ",";
         }
     }
+}
+
+float Aritmetica::getCommonDiference()
+{
+    return this->commondifference;
+}
+
+float Aritmetica::getNthTerm(float commondifference, float term, float index)
+{
+    // exemplo:
+    // Dados a5 = 100 e r = 10, calcule o primeiro termo ????
+    // como chamar a função ?? >> object.getNthTerm(10, object.getFirstTerm(), 5);
+    //
+    return term - ((index - 1)* commondifference);
 }
