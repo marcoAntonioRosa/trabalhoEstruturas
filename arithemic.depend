@@ -61,7 +61,7 @@
 1520055637 source:c:\users\light\desktop\trabalhopapg\src\progressao.cpp
 	"Progressao.h"
 
-1520159441 source:c:\users\light\desktop\trabalhopapg\main.cpp
+1520259767 source:c:\users\light\desktop\trabalhopapg\main.cpp
 	<iostream>
 	<vector>
 	<algorithm>
@@ -70,19 +70,19 @@
 	<Aritmetica.h>
 	<windows.h>
 
-1520159272 source:c:\users\light\desktop\trabalhopapg\src\aritmetica.cpp
+1520164495 source:c:\users\light\desktop\trabalhopapg\src\aritmetica.cpp
 	"Aritmetica.h"
 
-1520158702 c:\users\light\desktop\trabalhopapg\include\progressao.h
+1520163693 c:\users\light\desktop\trabalhopapg\include\progressao.h
 	<sstream>
 	<vector>
 	<algorithm>
 	<iostream>
 	<stdexcept>
 	<vector>
-	"Serialize.h"
+	<ctime>
 
-1520158543 c:\users\light\desktop\trabalhopapg\include\aritmetica.h
+1520163619 c:\users\light\desktop\trabalhopapg\include\aritmetica.h
 	<iostream>
 	<Progressao.h>
 

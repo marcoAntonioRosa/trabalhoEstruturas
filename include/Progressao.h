@@ -7,6 +7,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <vector>
+#include <ctime>
 
 using namespace std;
 
@@ -15,11 +16,13 @@ class Progressao
 protected:
     vector <float> input;
     string userinput;
+    string data;
     bool isinput;
     float firstterm;
     float tempt;
     float term;
     float commondifference;
+    float sum;
 public:
 //    bool setSequence(string);
 //
