@@ -4,6 +4,7 @@ using namespace std;
 
 bool Aritmetica::setSequence(string userinput)
 {
+    this->userinput = userinput;
     stringstream stream(userinput);
     bool passed = false;
 
@@ -117,4 +118,29 @@ float Aritmetica::getNthTerm(float commondifference, float term, float index)
     // como chamar a função ?? >> object.getNthTerm(10, object.getFirstTerm(), 5);
     //
     return term - ((index - 1)* commondifference);
+}
+
+float Aritmetica::getSum(float term)
+{
+    return sum = ((getFirstTerm() + getSpecificTerm(term)) * term) /2;
+}
+
+string Aritmetica::getCurrentData()
+{
+    time_t rawtime;
+    struct tm * timeinfo;
+    char buffer[100];
+
+    time (&rawtime);
+    timeinfo = localtime(&rawtime);
+    strftime(buffer,sizeof(buffer),"Data: %d/%m/%y Hora: %I:%M",timeinfo);
+    string fulldata(buffer);
+    return fulldata;
+}
+
+
+void Aritmetica::serialize(ostream& stream)
+{
+    this->data = getCurrentData();
+    stream << data << " " << userinput << " " << getCommonDiference() << " " << sum;
 }

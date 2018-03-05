@@ -16,16 +16,19 @@ public:
     void setTerm(float term);
     void setCommonDiference(float commondifference);
     void setFirstTerm(float firstterm);
+    void log();
+    void serialize(ostream& stream);
+    void deserialize(istream& stream);
 
     float getCommonDiference();
     float getFirstTerm();
     float getTerm();
+    float getSum(float term);
 
     float getSpecificTerm(float specterm);
     float getNthTerm(float commondifference, float term, float index);
-
+    string getCurrentData();
     void print();
-
 };
 
 #endif // ARITMETICA_H
