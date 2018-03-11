@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <fstream>
 #include <Progressao.h>
+#include <Geometrica.h>
 #include <Aritmetica.h>
 #include <windows.h>
 
@@ -19,8 +20,14 @@ int main()
     100−40=a1
     a1=60
     */
+
     ar.setSequence("100");
     cout << ar.getNthTerm(10, ar.getFirstTerm(), 5) << endl;
 
-
+    Geometrica ge;
+    ge.setSequence("54");
+    //razao, termo, posição do termo, posição do termo no qual estou buscando
+    cout << ge.getNthTerm(3, ge.getFirstTerm(), 4, 6) << endl;
+    cout << ge.getSum(3, 6, 4) << endl;
+     cout << ge.getProduct(3, 4, 6) << endl;
 }

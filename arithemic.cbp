@@ -33,9 +33,12 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Aritmetica.h" />
+		<Unit filename="include/Geometrica.h" />
+		<Unit filename="include/Geométrica.h" />
 		<Unit filename="include/Progressao.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Aritmetica.cpp" />
+		<Unit filename="src/Geometrica.cpp" />
 		<Unit filename="typeof.h" />
 		<Extensions>
 			<code_completion />

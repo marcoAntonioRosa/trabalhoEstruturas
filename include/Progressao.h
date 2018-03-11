@@ -23,6 +23,7 @@ protected:
     float term;
     float commondifference;
     float sum;
+    float product;
 public:
 //    bool setSequence(string);
 //
