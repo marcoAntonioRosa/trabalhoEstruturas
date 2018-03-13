@@ -22,12 +22,12 @@ public:
     float getCommonDifference();
     float getFirstTerm();
     float getTerm();
-    float getSum(float commondifference,  float an, float pos);
-    long long getProduct(float commondifference, float an, float am);
+    float getSum(float term);
+    long long getProduct(float term);
 
 
     float getSpecificTerm(float specterm);
-    float getNthTerm(float commondifference, float term, float an, float am);
+    float getNthTerm(float commondifference, float term, float n);
     string getCurrentData();
     void print();
 };

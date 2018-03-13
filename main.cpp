@@ -25,6 +25,13 @@ int main()
     cout << ar.getNthTerm(10, ar.getFirstTerm(), 5) << endl;
 
     Geometrica ge;
+    ge.setSequence("2,6,18");
+    cout << ge.getNthTerm(ge.getCommonDifference(), ge.getFirstTerm(), 6) << endl;
+    cout << ge.getSum(6) << endl;
+    cout << ge.getProduct(6) << endl;
+
+
+    /*
     ge.setSequence("54");
     //razao, termo, posição do termo, posição do termo no qual estou buscando
     cout << ge.getNthTerm(3, ge.getFirstTerm(), 4, 6) << endl;
@@ -32,4 +39,5 @@ int main()
     cout << ge.getSum(3, 6, 4) << endl;
     //Razão, posição do termo, total de termos
      cout << ge.getProduct(3, 4, 6) << endl;
+     */
 }

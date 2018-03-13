@@ -58,7 +58,7 @@ bool Geometrica::isArithmetic(vector <float> input)
     {
         for (int x=input.size()-1; x>=1; x--)
         {
-            aux.push_back(input.at(x) - input.at(x-1));
+            aux.push_back(input.at(x) / input.at(x-1));
         }
 
         if (adjacent_find(aux.begin(), aux.end(), not_equal_to<float>() ) == aux.end())
@@ -113,19 +113,19 @@ float Geometrica::getCommonDifference()
     return this->commondifference;
 }
 
-float Geometrica::getNthTerm(float commondifference, float term, float an, float am)
+float Geometrica::getNthTerm(float commondifference, float term, float n)
 {
-    return term / pow(commondifference, (an-am));
+    return term * pow(commondifference, (n-1));
 }
 
-float Geometrica::getSum(float commondifference, float an, float pos)
+float Geometrica::getSum(float term)
 {
-    return sum = getNthTerm(commondifference, getFirstTerm(), pos, 1) * (pow(commondifference, an) - 1) / (commondifference - 1);
+    return sum = getFirstTerm() * (pow(getCommonDifference(), term) - 1) / (getCommonDifference() - 1);
 }
 
-long long Geometrica::getProduct(float commondifference, float an, float am)
+long long Geometrica::getProduct(float term)
 {
-    return product =(long long) sqrt( pow(getNthTerm(commondifference, getFirstTerm(), an, 1) * getNthTerm(commondifference, getFirstTerm(), an, am), am));
+    return product =(long long) sqrt( pow(getFirstTerm() * getNthTerm(getCommonDifference(), getFirstTerm(), term), term));
 }
 
 string Geometrica::getCurrentData()
