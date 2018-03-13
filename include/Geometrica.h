@@ -23,7 +23,7 @@ public:
     float getFirstTerm();
     float getTerm();
     float getSum(float commondifference,  float an, float pos);
-    float getProduct(float commondifference, float an, float am);
+    long long getProduct(float commondifference, float an, float am);
 
 
     float getSpecificTerm(float specterm);

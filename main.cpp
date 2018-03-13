@@ -28,6 +28,8 @@ int main()
     ge.setSequence("54");
     //razao, termo, posição do termo, posição do termo no qual estou buscando
     cout << ge.getNthTerm(3, ge.getFirstTerm(), 4, 6) << endl;
+    //razao, numero de termos, posição do termo em destaque. PRECISO CONCERTAR ISSO
     cout << ge.getSum(3, 6, 4) << endl;
+    //Razão, posição do termo, total de termos
      cout << ge.getProduct(3, 4, 6) << endl;
 }

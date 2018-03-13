@@ -123,9 +123,9 @@ float Geometrica::getSum(float commondifference, float an, float pos)
     return sum = getNthTerm(commondifference, getFirstTerm(), pos, 1) * (pow(commondifference, an) - 1) / (commondifference - 1);
 }
 
-float Geometrica::getProduct(float commondifference, float an, float am)
+long long Geometrica::getProduct(float commondifference, float an, float am)
 {
-    return product = sqrt(getNthTerm(commondifference, getFirstTerm(), an, 1) * (getNthTerm(commondifference, getFirstTerm(), an, am)^am));
+    return product =(long long) sqrt( pow(getNthTerm(commondifference, getFirstTerm(), an, 1) * getNthTerm(commondifference, getFirstTerm(), an, am), am));
 }
 
 string Geometrica::getCurrentData()
