@@ -2,6 +2,9 @@
 #include <math.h>
 using namespace std;
 
+//Setters
+
+//Cria uma stream com os números sem as virgulas, define o primeiro termo e a razão
 bool Geometrica::setSequence(string userinput)
 {
     this->userinput = userinput;
@@ -23,7 +26,7 @@ bool Geometrica::setSequence(string userinput)
         }
     }
 
-    if (passed && isArithmetic(input))
+    if (passed && isGeometric(input))
     {
         if (input.size() == 1)
             setCommonDifference(input.at(0));
@@ -35,22 +38,20 @@ bool Geometrica::setSequence(string userinput)
     return false;
 }
 
-void Geometrica::setTerm(float term)
-{
-    this->term = term;
-}
-
-void Geometrica::setFirstTerm(float firstterm)
-{
-    this->firstterm = firstterm;
-}
-
+//Define a razão
 void Geometrica::setCommonDifference(float commondifference)
 {
     this->commondifference = commondifference;
 }
 
-bool Geometrica::isArithmetic(vector <float> input)
+//Define o primeiro termo
+void Geometrica::setFirstTerm(float firstterm)
+{
+    this->firstterm = firstterm;
+}
+
+//Testa se a progressão é realmente geométrica, dividindo todos os termos pelos seus anteriores e comparando o primeiro termo com o ultimo
+bool Geometrica::isGeometric(vector <float> input)
 {
     vector <float> aux;
 
@@ -71,9 +72,13 @@ bool Geometrica::isArithmetic(vector <float> input)
     return false;
 }
 
+
+//Getters
+
+//Define e retorna a razão
 float Geometrica::privateGetCommonDifference()
 {
-    if(isArithmetic(input) && input.size() > 1)
+    if(isGeometric(input) && input.size() > 1)
     {
         setCommonDifference((input.at(1) / input.at(0)));
         return (input.at(1) / input.at(0));
@@ -85,50 +90,62 @@ float Geometrica::privateGetCommonDifference()
     return 0;
 }
 
-float Geometrica::getFirstTerm()
-{
-    return this->firstterm;
-}
-
-//Esse aqui é realmente necessário?
-float Geometrica::getSpecificTerm(float specterm)
-{
-    float specificterm = getFirstTerm() * pow(privateGetCommonDifference(), (specterm - 1));
-    return specificterm;
-}
-
-void Geometrica::print()
-{
-    if(isinput)
-    {
-        for(unsigned int x=0; x<input.size(); x++)
-        {
-            cout << input.at(x) << ",";
-        }
-    }
-}
-
+//Apenas retorna a razão
 float Geometrica::getCommonDifference()
 {
     return this->commondifference;
 }
 
-float Geometrica::getNthTerm(float commondifference, float term, float n)
+//Retorna o primeiro termo
+float Geometrica::getFirstTerm()
 {
-    return term * pow(commondifference, (n-1));
+    return this->firstterm;
 }
 
-float Geometrica::getSum(float term)
+//Calcula e retorna o valor de um termo na posição desejada
+float Geometrica::getNthTerm(float pos)
 {
-    return sum = getFirstTerm() * (pow(getCommonDifference(), term) - 1) / (getCommonDifference() - 1);
+    return this->term = getFirstTerm() * pow(getCommonDifference(), (pos-1));
 }
 
-long long Geometrica::getProduct(float term)
+//Calcula e retorna a soma dos termos de acordo com a quantidade dos mesmos
+float Geometrica::getSum(float qterm)
 {
-    return product =(long long) sqrt( pow(getFirstTerm() * getNthTerm(getCommonDifference(), getFirstTerm(), term), term));
+    return this->sum = getFirstTerm() * (pow(getCommonDifference(), qterm) - 1) / (getCommonDifference() - 1);
 }
 
-string Geometrica::getCurrentData()
+//Calcula e retorna o produto dos termos de acordo com a quantidade dos mesmos
+long long Geometrica::getProduct(float qterm)
+{
+    return this->product =(long long) sqrt( pow(getFirstTerm() * getNthTerm(qterm), qterm));
+}
+
+
+float Geometrica::getAllTerms(float pos)
+{
+    print();
+    if(isGeometric(input) && pos>input.size())
+    {
+        for (int x=input.size(); x<pos; x++)
+        {
+            cout << getNthTerm(x+1); //O +1 server para ele não repetir o valor anterior
+            if(x < pos-1)
+                cout << ", ";
+        }
+        cout << endl;
+    }
+    return 0;
+
+}
+
+//Salvar em arquivo
+void Geometrica::serialize(ostream& stream)
+{
+    this->data = getCurrentDate();
+    stream << data << " " << userinput << " " << getCommonDifference() << " " << sum;
+}
+
+string Geometrica::getCurrentDate()
 {
     time_t rawtime;
     struct tm * timeinfo;
@@ -141,10 +158,18 @@ string Geometrica::getCurrentData()
     return fulldata;
 }
 
-
-void Geometrica::serialize(ostream& stream)
+void Geometrica::print()
 {
-    this->data = getCurrentData();
-    stream << data << " " << userinput << " " << getCommonDifference() << " " << sum;
+    if(isinput)
+    {
+        for(unsigned int x=0; x<input.size(); x++)
+        {
+            cout << input.at(x) << ", ";
+            /*if(x < input.size()-1)
+                cout << ", ";
+            */
+        }
+        //cout << endl;
+    }
 }
 

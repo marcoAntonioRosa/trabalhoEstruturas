@@ -139,3 +139,20 @@
 	"Geometrica.h"
 	<math.h>
 
+1520964363 source:c:\users\usuário\documents\trabalhopapg-m2.0\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1520970968 source:c:\users\usuário\documents\trabalhopapg-m2.0\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<fstream>
+	<Progressao.h>
+	<Geometrica.h>
+	<Aritmetica.h>
+	<windows.h>
+
+1520970913 source:c:\users\usuário\documents\trabalhopapg-m2.0\src\geometrica.cpp
+	"Geometrica.h"
+	<math.h>
+

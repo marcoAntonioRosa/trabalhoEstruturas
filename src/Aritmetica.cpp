@@ -103,6 +103,7 @@ void Aritmetica::print()
         {
             cout << input.at(x) << ",";
         }
+
     }
 }
 

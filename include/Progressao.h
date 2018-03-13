@@ -20,8 +20,8 @@ protected:
     bool isinput;
     float firstterm;
     float tempt;
-    float term;
     float commondifference;
+    float term;
     float sum;
     long long product;
 public:

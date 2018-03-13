@@ -9,26 +9,23 @@ class Geometrica : public Progressao
 private:
     float privateGetCommonDifference();
     bool isInput(bool isinput);
-    bool isArithmetic(vector <float> userinput);
+    bool isGeometric(vector <float> input);
 public:
     bool setSequence(string);
-    void setTerm(float term);
     void setCommonDifference(float commondifference);
     void setFirstTerm(float firstterm);
-    void log();
-    void serialize(ostream& stream);
-    void deserialize(istream& stream);
 
     float getCommonDifference();
     float getFirstTerm();
-    float getTerm();
-    float getSum(float term);
-    long long getProduct(float term);
+    float getNthTerm(float pos);
+    float getSum(float qterm);
+    long long getProduct(float qterm);
+    float getAllTerms(float pos);
 
-
-    float getSpecificTerm(float specterm);
-    float getNthTerm(float commondifference, float term, float n);
-    string getCurrentData();
+    void log(); //FUNÇÃO NÃO UTILIZADA
+    void serialize(ostream& stream);
+    void deserialize(istream& stream); //FUNÇÃO NÃO UTILIZADA
+    string getCurrentDate();
     void print();
 };
 
