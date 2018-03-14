@@ -88,3 +88,27 @@
 
 1520158689 c:\users\light\desktop\trabalhopapg\include\serialize.h
 
+1521048202 source:c:\users\usuario\desktop\trabalhopapg-master\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<fstream>
+	<Progressao.h>
+	<Aritmetica.h>
+	<windows.h>
+
+1521048714 source:c:\users\usuario\desktop\trabalhopapg-master\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1521048202 source:c:\users\usuario\desktop\trabalhopapg\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<fstream>
+	<Progressao.h>
+	<Aritmetica.h>
+	<windows.h>
+
+1521048714 source:c:\users\usuario\desktop\trabalhopapg\src\aritmetica.cpp
+	"Aritmetica.h"
+

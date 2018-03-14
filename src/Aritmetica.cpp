@@ -26,9 +26,9 @@ bool Aritmetica::setSequence(string userinput)
     if (passed && isArithmetic(input))
     {
         if (input.size() == 1)
-            setCommonDiference(input.at(0));
+            setCommonDifference(input.at(0));
         else
-            setCommonDiference(privateGetCommonDiference());
+            setCommonDifference(privateGetCommonDiference());
         return true;
     }
     this->isinput = false;
@@ -44,7 +44,7 @@ void Aritmetica::setFirstTerm(float firstterm)
 {
     this->firstterm = firstterm;
 }
-void Aritmetica::setCommonDiference(float commondifference)
+void Aritmetica::setCommonDifference(float commondifference)
 {
     this->commondifference = commondifference;
 }
@@ -74,7 +74,7 @@ float Aritmetica::privateGetCommonDiference()
 {
     if(isArithmetic(input) && input.size() > 1)
     {
-        setCommonDiference((input.at(1) - input.at(0)));
+        setCommonDifference((input.at(1) - input.at(0)));
         return (input.at(1) - input.at(0));
     }
     else if (input.size() == 1)
@@ -120,9 +120,9 @@ float Aritmetica::getNthTerm(float commondifference, float term, float index)
     return term - ((index - 1)* commondifference);
 }
 
-float Aritmetica::getSum(float term)
+float Aritmetica::getSumFromTheFirstNElements(float sum)
 {
-    return sum = ((getFirstTerm() + getSpecificTerm(term)) * term) /2;
+    return result = ((getFirstTerm() + getSpecificTerm(sum)) * sum) /2;
 }
 
 string Aritmetica::getCurrentData()
