@@ -19,8 +19,10 @@ int main()
     100−40=a1
     a1=60
     */
-    ar.setSequence("100");
-    cout << ar.getNthTerm(10, ar.getFirstTerm(), 5) << endl;
+    ar.setSequence("1,2,3,4,5");
+
+    cout << ar.getSumFromTheFirstNElements(5);
+
 
 
 }

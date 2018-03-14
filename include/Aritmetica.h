@@ -14,7 +14,7 @@ public:
     bool setSequence(string);
 
     void setTerm(float term);
-    void setCommonDiference(float commondifference);
+    void setCommonDifference(float commondifference);
     void setFirstTerm(float firstterm);
     void log();
     void serialize(ostream& stream);
@@ -23,7 +23,7 @@ public:
     float getCommonDiference();
     float getFirstTerm();
     float getTerm();
-    float getSum(float term);
+    float getSumFromTheFirstNElements(float sum);
 
     float getSpecificTerm(float specterm);
     float getNthTerm(float commondifference, float term, float index);
