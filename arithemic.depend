@@ -88,27 +88,88 @@
 
 1520158689 c:\users\light\desktop\trabalhopapg\include\serialize.h
 
-1521048202 source:c:\users\usuario\desktop\trabalhopapg-master\main.cpp
+1520789911 source:c:\users\marco\documents\github\trabalhopapg\main.cpp
 	<iostream>
 	<vector>
 	<algorithm>
 	<fstream>
 	<Progressao.h>
+	<Geometrica.h>
 	<Aritmetica.h>
 	<windows.h>
 
-1521048714 source:c:\users\usuario\desktop\trabalhopapg-master\src\aritmetica.cpp
+1520424111 source:c:\users\marco\documents\github\trabalhopapg\src\aritmetica.cpp
 	"Aritmetica.h"
 
-1521048202 source:c:\users\usuario\desktop\trabalhopapg\main.cpp
+1520781192 source:c:\users\marco\documents\github\trabalhopapg\src\geometrica.cpp
+	"Geometrica.h"
+	<math.h>
+
+1520893224 source:c:\users\alunos\documents\trabalhopapg-m1.0\trabalhopapg-m1.0\main.cpp
 	<iostream>
 	<vector>
 	<algorithm>
 	<fstream>
 	<Progressao.h>
+	<Geometrica.h>
+	<Aritmetica.h>
+	<windows.h>
+
+1520893225 source:c:\users\alunos\documents\trabalhopapg-m1.0\trabalhopapg-m1.0\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1520894419 source:c:\users\alunos\documents\trabalhopapg-m1.0\trabalhopapg-m1.0\src\geometrica.cpp
+	"Geometrica.h"
+	<math.h>
+
+1520880764 source:c:\users\marco\documents\github\trabalhopapg-m1.0\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1520947535 source:c:\users\marco\documents\github\trabalhopapg-m1.0\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<fstream>
+	<Progressao.h>
+	<Geometrica.h>
+	<Aritmetica.h>
+	<windows.h>
+
+1520942710 source:c:\users\marco\documents\github\trabalhopapg-m1.0\src\geometrica.cpp
+	"Geometrica.h"
+	<math.h>
+
+1520964363 source:c:\users\usuário\documents\trabalhopapg-m2.0\src\aritmetica.cpp
+	"Aritmetica.h"
+
+1520970968 source:c:\users\usuário\documents\trabalhopapg-m2.0\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<fstream>
+	<Progressao.h>
+	<Geometrica.h>
+	<Aritmetica.h>
+	<windows.h>
+
+1520970913 source:c:\users\usuário\documents\trabalhopapg-m2.0\src\geometrica.cpp
+	"Geometrica.h"
+	<math.h>
+
+1521052736 source:c:\users\usuario\desktop\trabalhopapg\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<fstream>
+	<Progressao.h>
+	<Geometrica.h>
 	<Aritmetica.h>
 	<windows.h>
 
 1521048714 source:c:\users\usuario\desktop\trabalhopapg\src\aritmetica.cpp
 	"Aritmetica.h"
+
+1521052736 source:c:\users\usuario\desktop\trabalhopapg\src\geometrica.cpp
+	"Geometrica.h"
+	<math.h>
 
