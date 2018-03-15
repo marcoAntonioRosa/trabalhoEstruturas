@@ -47,17 +47,20 @@ int main()
     cout << ", " <<  ae.getNthTerm(3);
     cout << ", " <<  ae.getNthTerm(4);
     cout << ", " <<  ae.getNthTerm(5) << endl;
-    cout << "Sum: " <<  ae.getSum(7) << endl;
+    cout << "Sum: " <<  ae.getSum(7) << endl << endl;
 
 
+    Geometrica ge, gg;
+    ge.setSequence("2");
+    gg.setSequence("2, 6, 18");
 
-    /*
-    Geometrica ge;
-    ge.setSequence("2, 6, 18");
     ge.getAllTerms(10);
     cout << ge.getSum(6) << endl;
-    cout << ge.getProduct(6) << endl;
-    */
+    cout << ge.getProduct(6) << endl << endl;
+
+    gg.getAllTerms(10);
+    cout << gg.getSum(6) << endl;
+    cout << gg.getProduct(6) << endl << endl;
 
 
 }

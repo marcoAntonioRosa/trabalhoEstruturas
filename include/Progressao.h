@@ -16,7 +16,7 @@ class Progressao
 protected:
     vector <float> input;
     string userinput;
-    string data;
+    string date;
     bool isinput;
     float firstTerm;
     float tempt;

@@ -9,25 +9,21 @@ class Aritmetica : public Progressao
 private:
     float privateGetCommonDifference();
     bool isInput(bool isinput);
-    bool isArithmetic(vector <float> userinput);
+    bool isArithmetic(vector <float> input);
 public:
     bool setSequence(string);
-
-    void setTerm(float term);
     void setCommonDifference(float commonDifference);
     void setFirstTerm(float firstterm);
-    void log();
-    void serialize(ostream& stream);
-    void deserialize(istream& stream);
 
     float getCommonDifference();
     float getFirstTerm();
-    float getTerm();
-    float getSum(float term);
-
-    float getSpecificTerm(float specterm);
     float getNthTerm(float pos);
-    string getCurrentData();
+    float getSum(float qterm);
+
+    void log(); //FUNÇÃO NÃO UTILIZADA
+    void serialize(ostream& stream);
+    void deserialize(istream& stream); //FUNÇÃO NÃO UTILIZADA
+    string getCurrentDate();
     void print();
 };
 

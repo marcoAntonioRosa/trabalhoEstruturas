@@ -32,11 +32,6 @@ bool Aritmetica::setSequence(string userinput)
     return false;
 }
 
-void Aritmetica::setTerm(float term)
-{
-    this->term = term;
-}
-
 void Aritmetica::setFirstTerm(float firstTerm)
 {
     this->firstTerm = firstTerm;
@@ -90,12 +85,6 @@ float Aritmetica::getFirstTerm()
     return this->firstTerm;
 }
 
-float Aritmetica::getSpecificTerm(float specterm)
-{
-    float specificterm = getFirstTerm() + ((specterm - 1) * privateGetCommonDifference());
-    return specificterm;
-}
-
 void Aritmetica::print()
 {
     if(isinput)
@@ -122,7 +111,7 @@ float Aritmetica::getSum(float term)
     return this->term = ((getFirstTerm() + getNthTerm(term)) * term) /2;
 }
 
-string Aritmetica::getCurrentData()
+string Aritmetica::getCurrentDate()
 {
     time_t rawtime;
     struct tm * timeinfo;
@@ -135,9 +124,8 @@ string Aritmetica::getCurrentData()
     return fulldata;
 }
 
-
 void Aritmetica::serialize(ostream& stream)
 {
-    this->data = getCurrentData();
-    stream << data << " " << userinput << " " << getCommonDifference() << " " << sum;
+    this->date = getCurrentDate();
+    stream << date << " " << userinput << " " << getCommonDifference() << " " << sum;
 }

@@ -42,9 +42,9 @@ void Geometrica::setCommonDifference(float commonDifference)
 }
 
 //Define o primeiro termo
-void Geometrica::setFirstTerm(float firstterm)
+void Geometrica::setFirstTerm(float firstTerm)
 {
-    this->firstterm = firstterm;
+    this->firstTerm = firstTerm;
 }
 
 //Testa se a progressão é realmente geométrica, dividindo todos os termos pelos seus anteriores e comparando o primeiro termo com o ultimo
@@ -100,7 +100,7 @@ float Geometrica::getCommonDifference()
 //Retorna o primeiro termo
 float Geometrica::getFirstTerm()
 {
-    return this->firstterm;
+    return this->firstTerm;
 }
 
 //Calcula e retorna o valor de um termo na posição desejada
@@ -142,8 +142,8 @@ float Geometrica::getAllTerms(float pos)
 //Salvar em arquivo
 void Geometrica::serialize(ostream& stream)
 {
-    this->data = getCurrentDate();
-    stream << data << " " << userinput << " " << getCommonDifference() << " " << sum;
+    this->date = getCurrentDate();
+    stream << date << " " << userinput << " " << getCommonDifference() << " " << sum;
 }
 
 string Geometrica::getCurrentDate()
