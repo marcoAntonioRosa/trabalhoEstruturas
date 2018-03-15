@@ -25,10 +25,7 @@ bool Aritmetica::setSequence(string userinput)
 
     if (passed && isArithmetic(input))
     {
-        if (input.size() == 1)
-            setCommonDifference(input.at(0));
-        else
-            setCommonDifference(privateGetCommonDiference());
+        setCommonDifference(privateGetCommonDifference());
         return true;
     }
     this->isinput = false;
@@ -40,13 +37,14 @@ void Aritmetica::setTerm(float term)
     this->term = term;
 }
 
-void Aritmetica::setFirstTerm(float firstterm)
+void Aritmetica::setFirstTerm(float firstTerm)
 {
-    this->firstterm = firstterm;
+    this->firstTerm = firstTerm;
 }
-void Aritmetica::setCommonDifference(float commondifference)
+
+void Aritmetica::setCommonDifference(float commonDifference)
 {
-    this->commondifference = commondifference;
+    this->commonDifference = commonDifference;
 }
 
 bool Aritmetica::isArithmetic(vector <float> input)
@@ -70,7 +68,7 @@ bool Aritmetica::isArithmetic(vector <float> input)
     return false;
 }
 
-float Aritmetica::privateGetCommonDiference()
+float Aritmetica::privateGetCommonDifference()
 {
     if(isArithmetic(input) && input.size() > 1)
     {
@@ -79,19 +77,22 @@ float Aritmetica::privateGetCommonDiference()
     }
     else if (input.size() == 1)
     {
-        return input.at(0);
+        float commonDifference;
+        cout << "Digite a razão: ";
+        cin >> commonDifference;
+        return commonDifference;
     }
     return 0;
 }
 
 float Aritmetica::getFirstTerm()
 {
-    return this->firstterm;
+    return this->firstTerm;
 }
 
 float Aritmetica::getSpecificTerm(float specterm)
 {
-    float specificterm = getFirstTerm() + ((specterm - 1) * privateGetCommonDiference());
+    float specificterm = getFirstTerm() + ((specterm - 1) * privateGetCommonDifference());
     return specificterm;
 }
 
@@ -106,23 +107,19 @@ void Aritmetica::print()
     }
 }
 
-float Aritmetica::getCommonDiference()
+float Aritmetica::getCommonDifference()
 {
-    return this->commondifference;
+    return this->commonDifference;
 }
 
-float Aritmetica::getNthTerm(float commondifference, float term, float index)
+float Aritmetica::getNthTerm(float pos)
 {
-    // exemplo:
-    // Dados a5 = 100 e r = 10, calcule o primeiro termo ????
-    // como chamar a função ?? >> object.getNthTerm(10, object.getFirstTerm(), 5);
-    //
-    return term - ((index - 1)* commondifference);
+    return this->term = getFirstTerm() + ((pos - 1) * getCommonDifference());
 }
 
-float Aritmetica::getSumFromTheFirstNElements(float sum)
+float Aritmetica::getSum(float term)
 {
-    return result = ((getFirstTerm() + getSpecificTerm(sum)) * sum) /2;
+    return this->term = ((getFirstTerm() + getNthTerm(term)) * term) /2;
 }
 
 string Aritmetica::getCurrentData()
@@ -142,5 +139,5 @@ string Aritmetica::getCurrentData()
 void Aritmetica::serialize(ostream& stream)
 {
     this->data = getCurrentData();
-    stream << data << " " << userinput << " " << getCommonDiference() << " " << sum;
+    stream << data << " " << userinput << " " << getCommonDifference() << " " << sum;
 }

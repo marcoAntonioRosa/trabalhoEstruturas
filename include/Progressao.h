@@ -18,9 +18,9 @@ protected:
     string userinput;
     string data;
     bool isinput;
-    float firstterm;
+    float firstTerm;
     float tempt;
-    float commondifference;
+    float commonDifference;
     float term;
     float sum;
     long long product;

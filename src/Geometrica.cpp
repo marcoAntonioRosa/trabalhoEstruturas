@@ -28,10 +28,7 @@ bool Geometrica::setSequence(string userinput)
 
     if (passed && isGeometric(input))
     {
-        if (input.size() == 1)
-            setCommonDifference(input.at(0));
-        else
-            setCommonDifference(privateGetCommonDifference());
+        setCommonDifference(privateGetCommonDifference());
         return true;
     }
     this->isinput = false;
@@ -39,9 +36,9 @@ bool Geometrica::setSequence(string userinput)
 }
 
 //Define a razão
-void Geometrica::setCommonDifference(float commondifference)
+void Geometrica::setCommonDifference(float commonDifference)
 {
-    this->commondifference = commondifference;
+    this->commonDifference = commonDifference;
 }
 
 //Define o primeiro termo
@@ -85,7 +82,11 @@ float Geometrica::privateGetCommonDifference()
     }
     else if (input.size() == 1)
     {
-        return input.at(0);
+        float commonDifference;
+        cout << "Digite a razão: ";
+        cin >> commonDifference;
+        return commonDifference;
+        //return input.at(0);
     }
     return 0;
 }
@@ -93,7 +94,7 @@ float Geometrica::privateGetCommonDifference()
 //Apenas retorna a razão
 float Geometrica::getCommonDifference()
 {
-    return this->commondifference;
+    return this->commonDifference;
 }
 
 //Retorna o primeiro termo

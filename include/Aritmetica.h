@@ -7,26 +7,26 @@
 class Aritmetica : public Progressao
 {
 private:
-    float privateGetCommonDiference();
+    float privateGetCommonDifference();
     bool isInput(bool isinput);
     bool isArithmetic(vector <float> userinput);
 public:
     bool setSequence(string);
 
     void setTerm(float term);
-    void setCommonDifference(float commondifference);
+    void setCommonDifference(float commonDifference);
     void setFirstTerm(float firstterm);
     void log();
     void serialize(ostream& stream);
     void deserialize(istream& stream);
 
-    float getCommonDiference();
+    float getCommonDifference();
     float getFirstTerm();
     float getTerm();
-    float getSumFromTheFirstNElements(float sum);
+    float getSum(float term);
 
     float getSpecificTerm(float specterm);
-    float getNthTerm(float commondifference, float term, float index);
+    float getNthTerm(float pos);
     string getCurrentData();
     void print();
 };

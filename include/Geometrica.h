@@ -12,7 +12,7 @@ private:
     bool isGeometric(vector <float> input);
 public:
     bool setSequence(string);
-    void setCommonDifference(float commondifference);
+    void setCommonDifference(float commonDifference);
     void setFirstTerm(float firstterm);
 
     float getCommonDifference();
