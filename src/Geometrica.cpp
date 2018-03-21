@@ -83,7 +83,7 @@ float Geometrica::privateGetCommonDifference()
     else if (input.size() == 1)
     {
         float commonDifference;
-        cout << "Digite a razão: ";
+        cout << "Digite a razao: ";
         cin >> commonDifference;
         return commonDifference;
         //return input.at(0);
@@ -104,33 +104,38 @@ float Geometrica::getFirstTerm()
 }
 
 //Calcula e retorna o valor de um termo na posição desejada
-float Geometrica::getNthTerm(float pos)
+float Geometrica::getNthTerm(int wantedPos, int currentPos)
 {
-    return this->term = getFirstTerm() * pow(getCommonDifference(), (pos-1));
+    return this->term = getFirstTerm() * pow(getCommonDifference(), (wantedPos-currentPos));
 }
 
 //Calcula e retorna a soma dos termos de acordo com a quantidade dos mesmos
-float Geometrica::getSum(float qterm)
+long long Geometrica::getSum(int qTerms, int firstTermPos)
 {
-    return this->sum = getFirstTerm() * (pow(getCommonDifference(), qterm) - 1) / (getCommonDifference() - 1);
+    if (firstTermPos!= 1){
+        setFirstTerm(getNthTerm(1, firstTermPos));
+
+    }
+    return this->sum = (long long)((getFirstTerm() * (pow(getCommonDifference(), qTerms) - 1) / (getCommonDifference() - 1))) ;
+
 }
 
 //Calcula e retorna o produto dos termos de acordo com a quantidade dos mesmos
-long long Geometrica::getProduct(float qterm)
+long long Geometrica::getProduct(int qTerms, int firstTermPos)
 {
-    return this->product =(long long) sqrt( pow(getFirstTerm() * getNthTerm(qterm), qterm));
+    return this->product =(long long) sqrt( pow(getFirstTerm() * getNthTerm(qTerms, firstTermPos), qTerms));
 }
 
 
-float Geometrica::getAllTerms(float pos)
+float Geometrica::getAllTerms(int qTerms, int firstTermPos)
 {
     print();
-    if(isGeometric(input) && pos>input.size())
+    if(isGeometric(input) && qTerms>input.size())
     {
-        for (int x=input.size(); x<pos; x++)
+        for (int x=input.size(); x<qTerms; x++)
         {
-            cout << getNthTerm(x+1); //O +1 server para ele não repetir o valor anterior
-            if(x < pos-1)
+            cout << getNthTerm(x+1, firstTermPos); //O +1 server para ele não repetir o valor anterior
+            if(x < qTerms-1)
                 cout << ", ";
         }
         cout << endl;
@@ -138,6 +143,28 @@ float Geometrica::getAllTerms(float pos)
     return 0;
 
 }
+
+float Geometrica::getQntTerms(int lastTerm, int firstTermPos)
+{
+    return this->term = getDecompose(lastTerm) + firstTermPos;
+}
+
+float Geometrica::getDecompose(int lastTerm)
+{
+    int count;
+    count = 0;
+    cout << "LT: " << lastTerm << endl;
+    cout << "FT: " << getFirstTerm() << endl;
+    lastTerm = lastTerm / getFirstTerm();
+    cout << "LT: " << lastTerm << endl;
+    while(lastTerm > 1){
+        lastTerm = lastTerm / getCommonDifference();
+        count++;
+    }
+    cout << "Count: " << count << endl;
+    return count;
+}
+
 
 //Salvar em arquivo
 void Geometrica::serialize(ostream& stream)

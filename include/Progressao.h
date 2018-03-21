@@ -22,7 +22,7 @@ protected:
     float tempt;
     float commonDifference;
     float term;
-    float sum;
+    long long sum;
     long long product;
     float result;
 public:

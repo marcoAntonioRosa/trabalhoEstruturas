@@ -190,7 +190,7 @@
 	"Geometrica.h"
 	<math.h>
 
-1521127120 source:c:\users\marco\documents\github\trabalhopapg-m2.0\main.cpp
+1521587978 source:c:\users\marco\documents\github\trabalhopapg-m2.0\main.cpp
 	<iostream>
 	<vector>
 	<algorithm>
@@ -199,12 +199,13 @@
 	<Geometrica.h>
 	<Aritmetica.h>
 	<windows.h>
+	<conio.h>
 	<locale.h>
 
 1521128236 source:c:\users\marco\documents\github\trabalhopapg-m2.0\src\aritmetica.cpp
 	"Aritmetica.h"
 
-1521128324 source:c:\users\marco\documents\github\trabalhopapg-m2.0\src\geometrica.cpp
+1521588156 source:c:\users\marco\documents\github\trabalhopapg-m2.0\src\geometrica.cpp
 	"Geometrica.h"
 	<math.h>
 

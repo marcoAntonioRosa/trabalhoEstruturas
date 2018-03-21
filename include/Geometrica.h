@@ -17,10 +17,12 @@ public:
 
     float getCommonDifference();
     float getFirstTerm();
-    float getNthTerm(float pos);
-    float getSum(float qterm);
-    long long getProduct(float qterm);
-    float getAllTerms(float pos);
+    float getNthTerm(int wantedPos, int currentPos);
+    long long getSum(int qTerms, int firstTermPos);
+    long long getProduct(int qTerms, int firstTermPos);
+    float getAllTerms(int qTerms, int firstTermPos);
+    float getQntTerms(int lastTerm, int firstTermPos);
+    float getDecompose(int lastTerm);
 
     void log(); //FUNÇÃO NÃO UTILIZADA
     void serialize(ostream& stream);
