@@ -112,9 +112,9 @@ float Geometrica::getNthTerm(int wantedPos, int currentPos)
 //Calcula e retorna a soma dos termos de acordo com a quantidade dos mesmos
 long long Geometrica::getSum(int qTerms, int firstTermPos)
 {
-    if (firstTermPos != 1){
+    if (firstTermPos != 1)
         setFirstTerm(getNthTerm(1, firstTermPos));
-    }
+
     return this->sum = (long long)((getFirstTerm() * (pow(getCommonDifference(), qTerms) - 1) / (getCommonDifference() - 1))) ;
 }
 

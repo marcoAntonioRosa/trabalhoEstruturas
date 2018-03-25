@@ -17,8 +17,8 @@ public:
 
     float getCommonDifference();
     float getFirstTerm();
-    float getNthTerm(float pos);
-    float getSum(float qterm);
+    float getNthTerm(int wantedPos, int currentPos);
+    float getSum(float qTerms, int firstTermPos);
 
     void log(); //FUNÇÃO NÃO UTILIZADA
     void serialize(ostream& stream);

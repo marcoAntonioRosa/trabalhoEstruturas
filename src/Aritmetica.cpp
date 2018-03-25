@@ -73,7 +73,7 @@ float Aritmetica::privateGetCommonDifference()
     else if (input.size() == 1)
     {
         float commonDifference;
-        cout << "Digite a razão: ";
+        cout << "Digite a razao: ";
         cin >> commonDifference;
         return commonDifference;
     }
@@ -101,15 +101,23 @@ float Aritmetica::getCommonDifference()
     return this->commonDifference;
 }
 
-float Aritmetica::getNthTerm(float pos)
+float Aritmetica::getNthTerm(int wantedPos, int currentPos)
 {
-    return this->term = getFirstTerm() + ((pos - 1) * getCommonDifference());
+    return this->term = getFirstTerm() + ((wantedPos - currentPos) * getCommonDifference());
 }
 
-float Aritmetica::getSum(float term)
+float Aritmetica::getSum(float qTerms, int firstTermPos)
 {
-    return this->term = ((getFirstTerm() + getNthTerm(term)) * term) /2;
+    if (firstTermPos != 1){
+        setFirstTerm(getNthTerm(1, firstTermPos));
+        return this->term = (getFirstTerm() + getNthTerm(qTerms, firstTermPos-1)) * (qTerms/2);
+    }
+    else
+        return this->term = (getFirstTerm() + getNthTerm(qTerms, firstTermPos)) * (qTerms/2);
 }
+
+
+
 
 string Aritmetica::getCurrentDate()
 {
