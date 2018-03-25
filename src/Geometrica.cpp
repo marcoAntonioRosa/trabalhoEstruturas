@@ -112,18 +112,25 @@ float Geometrica::getNthTerm(int wantedPos, int currentPos)
 //Calcula e retorna a soma dos termos de acordo com a quantidade dos mesmos
 long long Geometrica::getSum(int qTerms, int firstTermPos)
 {
-    if (firstTermPos!= 1){
+    if (firstTermPos != 1){
         setFirstTerm(getNthTerm(1, firstTermPos));
-
     }
     return this->sum = (long long)((getFirstTerm() * (pow(getCommonDifference(), qTerms) - 1) / (getCommonDifference() - 1))) ;
-
 }
 
 //Calcula e retorna o produto dos termos de acordo com a quantidade dos mesmos
 long long Geometrica::getProduct(int qTerms, int firstTermPos)
 {
-    return this->product =(long long) sqrt( pow(getFirstTerm() * getNthTerm(qTerms, firstTermPos), qTerms));
+    if (firstTermPos != 1){
+        setFirstTerm(getNthTerm(1, firstTermPos));
+    }
+
+    /*cout << "First term: " << getFirstTerm() << endl;
+    cout << "qTerms: " << qTerms << endl;
+    cout << "firstTermPos: " << firstTermPos << endl;
+    cout << "Last term " << getNthTerm(qTerms, 1) << endl;*/
+
+    return this->product =(long long) sqrt( pow(getFirstTerm() * getNthTerm(qTerms, 1), qTerms));
 }
 
 
@@ -153,15 +160,11 @@ float Geometrica::getDecompose(int lastTerm)
 {
     int count;
     count = 0;
-    cout << "LT: " << lastTerm << endl;
-    cout << "FT: " << getFirstTerm() << endl;
     lastTerm = lastTerm / getFirstTerm();
-    cout << "LT: " << lastTerm << endl;
     while(lastTerm > 1){
         lastTerm = lastTerm / getCommonDifference();
         count++;
     }
-    cout << "Count: " << count << endl;
     return count;
 }
 

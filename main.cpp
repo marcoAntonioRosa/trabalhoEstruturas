@@ -11,54 +11,101 @@
 
 using namespace std;
 
+void menuPaPg();
+void menuPg();
+
 int main()
 {
+    //menuPaPg();
 
     /*
-    Aritmetica ar;
     Dados a5 = 100 e r = 10, calcule o primeiro termo:
     a5=a1+(5–1).r
     100=a1+(5−1)⋅10
     100=a1+40
     100−40=a1
     a1=60
+    */
 
+    Aritmetica ar;
     ar.setSequence("100");
     cout << ar.getNthTerm(10, ar.getFirstTerm(), 5) << endl;
-    */
 
+}
 
+void menuPaPg(){
+    int op;
+    do{
+        cout << "Seja bem-vindo a calculadora de Pa e Pg" << endl;
+        cout << "0 - Sair" << endl;
+        cout << "1 - Calcular Pa" << endl;
+        cout << "2 - Calcular pg" << endl;
+        cin >> op;
+        switch(op){
+            case 1: system("cls"); break;
+            case 2: menuPg(); system("cls"); break;
+        }
+    }while(op != 0);
+}
+
+void menuPg(){
+    int op;
+    string entrada;
     Geometrica ge;
-    ge.setSequence("6,18");
-    //posição que eu quero, posição do "primeiro termo"
-    cout << ge.getNthTerm(1,2) << endl;
-    cout << ge.getNthTerm(4,2) << endl;
+    int wantedPos, currentPos, qTerms, firstTermPos, lastTerm;
+    do{
+        system("cls");
+        cout << "Seja bem-vindo a calculadora de PG" << endl;
+        cout << "Digite os termos que voce possui como no exemplo abaixo: " << endl;
+        cout << "2, 6, 18" << endl << endl;
+        cin.ignore();
+        getline(cin, entrada);
+        system("cls");
+        ge.setSequence(entrada);
+        cout << "" << entrada << endl;
+        cout << "O que deseja fazer?" << endl;
+        cout << "1 - Descobrir um termo" << endl;
+        cout << "2 - Somar todos os termos" << endl;
+        cout << "3 - Obter o produto dos termos" << endl;
+        cout << "4 - Descobrir a quantidade de termos" << endl;
+        cin >> op;
+        switch(op){
+            case 1:
+                cout << "Digite a posicao do termo que deseja encontrar, seguido da posicao do primeiro termo que voce possui" << endl;
+                cin >> wantedPos;
+                cin >> currentPos;
+                cout << "Termo contido na posicao " << wantedPos << ": "<< ge.getNthTerm(wantedPos, currentPos) << endl;
+                getch();
+                system("cls");
+                break;
 
-    //quantidade de termos, posicao do "primeiro termo"
-    cout << ge.getSum(6,2) << endl;
+            case 2:
+                cout << "Digite a quantidade de termos, seguido da posicao do primeiro termo que voce possui: " << endl;
+                cin >> qTerms >> firstTermPos;
+                cout << ge.getCommonDifference() << endl;
+                cout << "Resultado da soma: " << ge.getSum(qTerms, firstTermPos) << endl;
+                getch();
+                system("cls");
+                break;
 
-    //cout << ge.getProduct(6,2) << endl;
+            case 3:
+                cout << "Digite a quantidade de termos, seguido da posicao do primeiro termo que voce possui: " << endl;
+                cin >> qTerms >> firstTermPos;
+                cout << "Produto: " << ge.getProduct(qTerms, firstTermPos) << endl;
+                getch();
+                system("cls");
+                break;
 
+            case 4:
+                cout << "Digite o ultimo termo, seguido da posicao do primeiro termo que voce possui: " << endl;
+                cin >> lastTerm;
+                cin >> firstTermPos;
+                cout << "Quantidade de termos: " << ge.getQntTerms(lastTerm, firstTermPos) << endl;
+                getch();
+                system("cls");
+                break;
 
-    //Valor do ultimo termo e posição do primeiro termo
-    cout << ge.getQntTerms(486, 1) << endl;
-
-    //quantidade de termos, posicao do "primeiro termo"
-
-    Geometrica geo;
-    geo.setSequence("75");
-    cout << geo.getNthTerm(1,3) << endl;
-    cout << geo.getNthTerm(4,3) << endl;
-    cout << geo.getSum(10,3) << endl;
-    cout << geo.getProduct(10,3) << endl;
-
-
-    /*
-    cout << ge.getSum(6) << endl;
-    cout << ge.getProduct(6) << endl;
-    ge.getAllTerms(10);
-    cout << ge.getCurrentDate() << endl;
-    */
-
+        }
+    }while(op != 0);
 }
 
